@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png">
 <meta name="theme-color" content="#af0c18">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shahnawaj Ahmad – Trusted Global News and Insightful Analysis</title>
@@ -141,7 +142,7 @@ footer{border-top:4px solid var(--accb)}footer a:hover,.tp a:hover{color:#fff}fo
 .kb::after{content:"";display:block;position:absolute;inset:0;-webkit-mask-image:none;mask-image:none;background:linear-gradient(115deg,transparent 42%,#ffffff45 50%,transparent 58%);transform:translateX(-130%);animation:sh 7s ease-in-out infinite}
 @keyframes kb{to{transform:scale(1.04)}}@keyframes sh{0%,55%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
 .rv0{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.rv0.in{opacity:1;transform:none}.hg>div:nth-child(2){transition-delay:.12s}.hg>div:nth-child(3){transition-delay:.24s}
-.fi{animation:fiIn .9s ease both}@keyframes fiIn{from{opacity:0;transform:scale(.98)}}
+.fi{animation:fiIn .9s ease both}@keyframes fiIn{from{opacity:0;transform:scale(.98);filter:blur(12px)}}
 @media(prefers-reduced-motion:reduce){.kb::before,.kb::after,.fi{animation:none}}
 .hero2{padding:20px 0 22px;border-bottom:1px solid var(--line)}.hero2 .bkb{margin-bottom:18px}
 .hg{display:grid;grid-template-columns:1.15fr 1fr .85fr;gap:24px}
@@ -243,13 +244,62 @@ html[data-motion="off"] .rv1{opacity:1;transform:none}html[data-motion="off"] .w
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv1{opacity:1;transform:none}.wd>span{transform:none}}
 @media(max-width:640px){.mh .rt>*,.tp{animation-duration:.4s}}
 @media print{.rv1{opacity:1!important;transform:none!important}#prog,#up{display:none}}
+
+/* ===== suggestions pack: images, slider, header, mega menu, article tools, search, extras ===== */
+.th{background:linear-gradient(var(--g,135deg),#121212,#2a0b0e 70%,#4a0f15)}
+.qa{--pat:repeating-linear-gradient(115deg,#ffffff0d 0 2px,transparent 2px 18px)}.qb{--pat:radial-gradient(#ffffff16 1.2px,transparent 1.6px) 0 0/14px 14px}.qc{--pat:repeating-radial-gradient(circle at 85% 20%,transparent 0 16px,#ffffff12 16px 17px)}
+.th::before{background:radial-gradient(circle at var(--x,80%) var(--y,25%),rgba(220,38,50,.6),transparent 46%),radial-gradient(circle at calc(100% - var(--x,80%)) calc(100% - var(--y,25%)),rgba(255,255,255,.09),transparent 40%),var(--pat,none)}
+.th.fx{background:#14243f}.th.fx::before{background:var(--feat) center top/cover no-repeat}.th.fx i,.th.fx .tl{display:none}
+.th i{display:block;position:absolute;right:8%;bottom:12%;width:22cqw;height:22cqw;color:#fff;opacity:.35;z-index:1}
+.tl{position:absolute;left:8px;bottom:7px;z-index:1;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--accb);padding:2px 7px;border-radius:2px}
+@container (max-width:230px){.tl{display:none}}
+.fcard{position:relative;aspect-ratio:3/1;min-height:130px;border-radius:4px;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:20px 24px;margin:0 0 24px;isolation:isolate;background:linear-gradient(var(--g,135deg),#121212,#2a0b0e 70%,#4a0f15);animation:fiIn .9s ease both}
+.fcard::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at var(--x,80%) var(--y,25%),rgba(220,38,50,.6),transparent 46%),var(--pat,none)}
+.fcard i{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:min(24%,150px);aspect-ratio:1;opacity:.28}.fcard i svg{display:block;width:100%;height:100%}
+.fk{font:900 clamp(26px,5vw,56px)/1 var(--f);letter-spacing:-.02em;text-transform:uppercase;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.75)}.fcard small{opacity:.85;margin-top:6px}
+.k{color:var(--kc,var(--mut))}.k::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--kc,transparent);margin-right:6px;vertical-align:1px}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .k{color:color-mix(in srgb,var(--kc,var(--mut)) 62%,#fff)}}:root[data-theme="dark"] .k{color:color-mix(in srgb,var(--kc,var(--mut)) 62%,#fff)}
+/* hero slider */
+.sl{position:relative}.slt{display:grid}.slide{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s}.slide.on{opacity:1;visibility:visible}
+.slide h2{font-size:25px;font-weight:900;line-height:1.15;margin:6px 0 4px}.slide p{margin:0;color:var(--mut);font-size:14px}.slide .k{display:block;margin-top:10px}
+.slc{display:flex;align-items:center;gap:8px;margin-top:12px}.slb{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;flex:none}.slb:hover{border-color:var(--accb);color:var(--acc)}
+.sld{display:flex;gap:6px;flex:1}.dt{flex:1;height:22px;position:relative}.dt::before,.dt i{content:"";position:absolute;left:0;right:0;top:9px;height:3px;border-radius:2px}.dt::before{background:var(--line)}.dt i{background:var(--accb);transform-origin:0 50%;transform:scaleX(0)}
+.dt.on i{animation:slp 6s linear forwards}@keyframes slp{from{transform:scaleX(0)}to{transform:scaleX(1)}}.sl.paused .dt.on i{animation-play-state:paused}
+html[data-motion="off"] .dt.on i{transform:scaleX(1)}@media(prefers-reduced-motion:reduce){.dt.on i{transform:scaleX(1)}}
+/* compact sticky header + mega menu */
+.logo.mini{display:none}.hd .hr{display:none;margin-left:auto;order:2}.menu{order:1}.logo.mini img{height:22px;width:auto}
+.sc .logo.mini{display:flex;margin-right:10px;animation:drop .4s both}.sc .hd .hr{display:flex}.hd .burger{order:1}
+.mm{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:3px solid var(--accb);box-shadow:0 20px 30px -18px #0008;animation:drop .22s ease both}.mm[hidden]{display:none}
+.mmi{display:grid;grid-template-columns:290px minmax(0,1fr);gap:32px;max-width:1260px;margin:0 auto;padding:20px}@media(min-width:1440px){.mmi{max-width:1360px}}.mmt h3{font-size:24px;font-weight:900;margin-bottom:6px}.mmt p{margin:0 0 12px;color:var(--mut)}.mmt .va{display:inline-block;margin-top:14px}
+.mmc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.mmc .th{aspect-ratio:16/9}
+@media(max-width:1000px){.mm{display:none!important}}
+/* article */
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 6px}.tools button{border:1px solid var(--line);padding:8px 14px;border-radius:99px;font-weight:700;font-size:13px;display:inline-flex;gap:6px;align-items:center;transition:border-color .2s,background .2s}.tools button:hover{border-color:var(--accb)}.tools button[aria-pressed="true"]{background:var(--accb);color:#fff;border-color:var(--accb)}
+.kt{background:var(--soft);border-left:4px solid var(--accb);padding:14px 18px;margin:0 0 22px;border-radius:3px;max-width:68ch}.kt ul{margin:8px 0 0;padding-left:20px}.kt li{font-size:15.5px;line-height:1.6}
+.body p,.body li{font-size:var(--fs,18px)}.kt li{font-size:15.5px}.body .ab2 p{font-size:15px}
+.toc{max-width:none}.toc a.on{color:var(--acc);font-weight:700}.toc a{transition:color .2s}
+@media(min-width:1001px) and (max-width:1199px){.ab{grid-template-columns:minmax(0,1fr) 300px}.toc{grid-column:1/-1}}
+@media(min-width:1200px){.ab{grid-template-columns:170px minmax(0,1fr) 300px;gap:36px}.toc{position:sticky;top:76px;align-self:start;background:none;padding:0 0 0 14px;border-left:2px solid var(--line);margin:0}}
+@media(max-width:1000px){.ab{grid-template-columns:minmax(0,1fr)}.toc{grid-column:auto}}
+.nx{display:grid;grid-template-columns:150px 1fr;gap:14px;border:1px solid var(--line);padding:12px;border-radius:3px;margin-top:26px;max-width:68ch;align-items:center}.nx .m{display:block;text-transform:uppercase;font-weight:700;letter-spacing:.06em;font-size:12px}
+.au{display:flex;gap:18px;align-items:center;border:1px solid var(--line);padding:18px;border-radius:4px;margin-bottom:26px}.av.big{width:72px;height:72px;font-size:30px;flex:none}
+/* search overlay filters */
+.sf{display:grid;gap:6px;margin-bottom:16px}.fl{display:flex;gap:8px;overflow-x:auto;padding:3px 0;scrollbar-width:none}
+.fl button,.chp{flex:none;border:1px solid var(--line);padding:7px 14px;border-radius:99px;font-size:14px;font-weight:500;transition:border-color .2s,background .2s}.fl button:hover,.chp:hover{border-color:var(--accb);color:var(--acc)}.fl button[aria-pressed="true"]{background:var(--accb);color:#fff;border-color:var(--accb)}
+#res .cs2{margin-bottom:6px}mark{background:rgba(250,190,40,.45);color:inherit;border-radius:2px;padding:0 1px}
+/* newsletter card + anchor ad */
+.nfc{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#111;color:#fff;border-radius:4px;padding:22px 24px;margin-top:26px;border-left:6px solid var(--accb)}.nfc h3{font-size:20px}.nfc p{margin:4px 0 0;color:#ccc;font-size:14px}
+.nff{display:flex;gap:8px;flex:1;min-width:260px;max-width:420px}.nff input{flex:1;min-width:0;padding:12px;border:0;border-radius:3px;font:inherit;background:#fff;color:#1a1a1a}.nff button{background:var(--accb);color:#fff;font-weight:700;padding:0 18px;border-radius:3px}
+.anc{display:none;position:fixed;left:0;right:0;bottom:0;z-index:44;align-items:center;gap:8px;padding:6px 8px max(6px,env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line)}.anc .adl{margin:0;flex:none}.anc .adb{flex:1;min-height:44px;margin:0;padding:4px;font-size:13px}
+@media(max-width:640px){.anc{display:flex}body:not(.noanc){padding-bottom:64px}body:not(.noanc) #up{bottom:76px}.slide h2{font-size:23px}.nx{grid-template-columns:110px 1fr}.au{flex-direction:column;align-items:flex-start}.fcard{aspect-ratio:2/1}}
+body.noanc .anc{display:none}
 </style>
 </head>
 <body>
 <button class="skip" id="skip">Skip to main content</button>
 <div class="tp"><div class="w"><span>Shahnawaj Ahmad · SEO, AEO &amp; GEO Specialist · Birgunj, Parsa-Nepal</span><span><a href="mailto:contact@shahnawaj.com.np">contact@shahnawaj.com.np</a> · <a href="tel:+9779819215786">+977 9819215786</a> · Sun – Fri, 10:00 AM – 6:00 PM</span><span class="soc" id="soc0"></span></div></div>
-<div class="w mh"><a class="logo" href="#home" aria-label="Shahnawaj Ahmad home"><img alt="Shahnawaj Ahmad" width="429" height="48"></a><div class="rt"><a class="live dot" href="#story-0">LIVE</a><button class="ib" id="sb" aria-label="Search"></button><button class="ib" id="tb" aria-label="Toggle dark mode"></button><button class="ib" id="mt" aria-label="Pause animations" aria-pressed="false"></button><a class="sign" href="#home">Sign up</a></div></div>
-<header class="hd"><div class="w"><nav class="menu" id="menu" aria-label="Sections"></nav><button class="ib burger" id="bg" aria-label="Open menu" aria-controls="menu" aria-expanded="false"></button></div></header>
+<div class="w mh"><a class="logo" href="#home" aria-label="Shahnawaj Ahmad home"><img alt="Shahnawaj Ahmad" width="429" height="48"></a><div class="rt"><a class="live dot" href="#story-0">LIVE</a><button class="ib" id="sb" aria-label="Search"></button><button class="ib" id="tb" aria-label="Toggle dark mode"></button><button class="ib" id="mt" aria-label="Pause animations" aria-pressed="false"></button><button class="sign" id="inst" hidden>Install app</button><a class="sign" href="#home">Sign up</a></div></div>
+<header class="hd"><div class="w"><a class="logo mini" href="#home" aria-label="Shahnawaj Ahmad home"><img alt="Shahnawaj Ahmad" width="196" height="22"></a><nav class="menu" id="menu" aria-label="Sections"></nav><button class="ib burger" id="bg" aria-label="Open menu" aria-controls="menu" aria-expanded="false"></button><div class="hr"><button class="ib" id="sb2" aria-label="Search"></button><button class="ib" id="tb2" aria-label="Toggle dark mode"></button></div></div><div class="mm" id="mm" hidden></div></header>
 <div class="sub"><div class="w" id="sub"></div></div>
 <main id="app" tabindex="-1" aria-label="Main content"></main>
 <footer><div class="w"><div class="fg"><div><a class="logo" href="#home" aria-label="Shahnawaj Ahmad home"><img alt="Shahnawaj Ahmad" width="358" height="40"></a><p>Shahnawaj.com.np is written by <b style="color:#fff">Shahnawaj Ahmad</b>, an SEO/AEO/GEO specialist with 8+ years in digital marketing across WordPress, Shopify, Magento, BigCommerce and more. Practical, tested guides on SEO, AI tools and e-commerce platforms, alongside news and analysis.</p><p>Birgunj, Parsa, Nepal<br><a href="mailto:contact@shahnawaj.com.np">contact@shahnawaj.com.np</a><br><a href="tel:+9779819215786">+977 9819215786</a><br><a href="https://shahnawaj.com.np">shahnawaj.com.np</a><br>10:00 AM – 6:00 PM, Sun – Fri</p></div>
@@ -257,7 +307,8 @@ html[data-motion="off"] .rv1{opacity:1;transform:none}html[data-motion="off"] .w
 <div><h5>Policies</h5><ul><li><a href="#disclaimer">Disclaimer</a></li><li><a href="#editorial-policy">Editorial Policy</a></li><li><a href="#cookie-policy">Cookie Policy</a></li><li><a href="#sitemap">Sitemap</a></li></ul></div></div>
 <div class="fb"><span>© 2026 Shahnawaj.com.np – Shahnawaj Ahmad. All rights reserved. Sample headlines and artwork are placeholders.</span><span class="soc" id="soc"></span></div></div></footer>
 <div class="ov" id="ov" role="dialog" aria-label="Search"><div class="w"><div style="display:flex;justify-content:space-between;align-items:center"><b>Search Shahnawaj Ahmad</b><button class="ib" id="cl" aria-label="Close search">✕</button></div>
-<input id="q" placeholder="Search stories, topics, authors" aria-label="Search stories"><div id="res"></div></div></div>
+<input id="q" placeholder="Search stories, topics, authors" aria-label="Search stories"><div id="sf" class="sf"></div><div id="res"></div></div></div>
+<div class="anc" id="anc"><span class="adl">Advertisement</span><div class="adb">Anchor ad · 320 × 50</div><button class="ib" id="ancx" aria-label="Close advertisement">✕</button></div>
 <div id="prog" aria-hidden="true"></div><button id="up" aria-label="Back to top"></button>
 <script>
 const CATS=["News","World","Sports","Technology","Digital Marketing","Entertainment","Travel"],ALLC=[...CATS,"Business & Finance"],SL=c=>c.toLowerCase().replace(/&/g,"and").replace(/[^a-z]+/g,"-").replace(/^-|-$/g,"");
@@ -303,14 +354,15 @@ const A=[
 ["Business & Finance","Stock markets end mixed as investors weigh earnings and rate signals","Technology shares gained while energy and banking stocks slipped.",20,3,100],
 ["Business & Finance","Small manufacturers turn to automation to cope with a skills gap","Orders are rising faster than hiring.",37,5,22],
 ["Business & Finance","Personal finance: how to build an emergency fund when prices keep rising","Planners recommend starting small and automating the habit.",56,6,170]
-].map((a,i)=>({id:"story-"+i,cat:a[0],t:a[1],d:a[2],by:"Shahnawaj Ahmad",hrs:a[3],when:ago(a[3]),min:a[4],h:a[5]}));
+].map((a,i)=>({id:"story-"+i,cat:a[0],t:a[1],d:a[2],by:"Shahnawaj Ahmad",hrs:a[3],when:ago(a[3]),min:a[4],h:a[5],i,fx:a[1].startsWith("Answer engines")}));
 const P=i=>A[i%A.length],$=s=>document.querySelector(s),app=$("#app");
 const ic=(p,s=18)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
-const I={search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',moon:'<path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/>',menu:'<path d="M3 6h18M3 12h18M3 18h18"/>',play:'<path d="M8 5v14l11-7z" fill="currentColor"/>',pause:'<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>',fb:'<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',x:'<path d="M4 4l16 16M20 4 4 20"/>',yt:'<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/>',ig:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/>',li:'<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>'};
+const I={search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',moon:'<path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/>',menu:'<path d="M3 6h18M3 12h18M3 18h18"/>',play:'<path d="M8 5v14l11-7z" fill="currentColor"/>',bm:'<path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>',vol:'<path d="M11 5 6 9H2v6h4l5 4zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/>',pause:'<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>',fb:'<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',x:'<path d="M4 4l16 16M20 4 4 20"/>',yt:'<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/>',ig:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/>',li:'<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>'};
 const SOC=[["LinkedIn","li","https://www.linkedin.com/in/shah-nawaz-ahmed/"],["X","x","https://x.com/shahnawazbrj"],["Instagram","ig","https://www.instagram.com/shahnawazbrj/"],["Facebook","fb","https://www.facebook.com/sahnawajbrj"]];
 const socL=(s=18)=>SOC.map(([n,k,u])=>`<a href="${u}" target="_blank" rel="noopener" aria-label="${n}" title="${n}">${ic(I[k],s)}</a>`).join("");
 const CI={"News": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2\"/><path d=\"M18 14h-8M15 18h-5M10 6h8v4h-8V6Z\"/></svg>", "World": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/></svg>", "Sports": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1.2 1.2C7.8 18.7 7 20.2 7 22M14 14.7V17c0 .6.5 1 1.2 1.2 1 .5 1.8 2 1.8 3.8M18 2H6v7a6 6 0 0 0 12 0V2Z\"/></svg>", "Technology": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\"/><rect x=\"9\" y=\"9\" width=\"6\" height=\"6\"/><path d=\"M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2\"/></svg>", "Digital Marketing": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m22 7-8.5 8.5-5-5L2 17\"/><path d=\"M16 7h6v6\"/></svg>", "Entertainment": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"2.2\"/><path d=\"M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5\"/></svg>", "Travel": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z\"/></svg>", "Business & Finance": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M4 7l8-5 8 5z\"/></svg>"};
-const T=(a,c="")=>`<span class="th ${c}" style="--h:${a.h}"></span>`;
+const PT=a=>"q"+"abc"[a.i%3],SG=a=>`--g:${(a.i*53)%360}deg;--x:${20+(a.i*37)%60}%;--y:${15+(a.i*23)%60}%`;
+const T=(a,c="")=>`<span class="th ${c} ${a.fx?"fx":PT(a)}" style="${SG(a)}"><i>${CI[a.cat]}</i><b class="tl">${a.cat}</b></span>`;
 const row=a=>`<a class="card it" href="#${a.id}"><div><span class="k">${a.cat}</span><h3>${a.t}</h3><p>${a.d}</p><span class="m">${a.when}</span></div>${T(a)}</a>`;
 const mr=a=>`<a class="card mr" href="#${a.id}">${T(a)}<div><h4>${a.t}</h4><span class="m">${a.when}</span></div></a>`;
 const tx=a=>`<a class="card tx2" href="#${a.id}"><h4>${a.t}</h4><span class="m">${a.when}</span></a>`;
@@ -334,13 +386,14 @@ const pop=()=>`<div class="sbx"><input class="sbi" placeholder="Search stories, 
 const by=c=>A.filter(a=>a.cat===c);
 function home(){const br=byc("News"),L=br[0],g=byc,bf=g("Business & Finance");
 return `<div class="w"><section class="hero2"><div class="bkb"><b class="dot">Breaking news</b><div class="bkt"><div>${[...br,...br].map(a=>`<a href="#${a.id}">${a.t}</a>`).join("")}</div></div></div>
-<div class="hg"><div><a class="card" href="#${L.id}">${T(L,"w16 kb")}<h1>${L.t}</h1></a><ul class="live-l">${br.slice(1).map(a=>`<li><a href="#${a.id}">${a.t}</a> <span class="m">${a.when}</span></li>`).join("")}</ul></div>
+<div class="hg"><div>${SLIDER([br[0],A[15],A[35],A[10],A[25]])}<ul class="live-l">${br.slice(1).map(a=>`<li><a href="#${a.id}">${a.t}</a> <span class="m">${a.when}</span></li>`).join("")}</ul></div>
 <div><a class="card" href="#${A[5].id}">${T(A[5],"w16 kb")}<h2>${A[5].t}</h2><p>${A[5].d}</p></a>${[15,35,10].map(i=>mr(A[i])).join("")}</div>
 <div><h4 class="ht">Must read</h4>${[20,21,16,6].map(i=>tx(A[i])).join("")}<h4 class="ht" style="margin-top:20px">Opinion</h4>${[22,36].map(i=>op(A[i])).join("")}</div></div></section>
 <div class="two"><div>
 ${ADV(728,90,"Header / featured section ad")}
 ${S("Featured stories","",L1([A[5],A[15],A[35],A[25],A[30]]))}
 ${S("Latest news","",LAT.slice(0,6).map(row).join(""))}
+<div class="nfc"><div><h3>The morning briefing, in your inbox</h3><p>Five stories that matter, every weekday. No spam.</p></div><div class="nff"><input type="email" placeholder="Email address" aria-label="Email address"><button class="sub1">Subscribe</button></div></div>
 ${S("Technology","Technology",L1(g("Technology")))}
 ${S("Digital Marketing","Digital Marketing",L2(g("Digital Marketing")))}
 ${S("Business & Finance","Business & Finance",big(bf[0])+bf.slice(1).map(tx).join(""))}
@@ -409,44 +462,82 @@ Object.assign(PAGES,{
 [`Cookies we use`,[`Essential: needed for the site to load and function, and to remember settings such as light or dark mode.`,`Analytics: help us understand which pages are read, using tools such as Google Tag Manager and related services.`,`Advertising: where enabled, third-party partners may set cookies to show relevant ads and measure their performance.`,`Third-party content: embedded services such as comment plugins and social buttons may set their own cookies.`]],
 [`Managing cookies`,`You can block or delete cookies in your browser settings, and most browsers let you clear them at any time. Blocking some cookies may affect how parts of the site work.`],
 [`More information`,`Read our Privacy Policy to see how we handle personal data, or email ${EM} with any questions.`]]},
-sitemap:{t:`Sitemap`,x:`m`,d:`Every section and page on this website in one place.`,s:[]}});
+sitemap:{t:`Sitemap`,x:`m`,d:`Every section and page on this website in one place.`,s:[]},
+author:{t:`Shahnawaj Ahmad`,x:`a`,hide:1,d:`SEO, AEO and GEO specialist, publisher of this website and author of every story on it.`,s:[[`About the author`,`Shahnawaj Ahmad is a digital marketing specialist with 8+ years of experience in SEO, AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization), based in Birgunj, Parsa, Nepal. He has worked on 100+ websites across WordPress, Shopify, Magento, BigCommerce, PrestaShop, Laravel and Shopware.`],[`Areas of coverage`,[`World news, politics and the economy`,`Technology, AI tools and e-commerce platforms`,`SEO, AEO and GEO strategy for online businesses`]],[`Contact`,`Email ${EM} or visit the <a href="#contact" style="color:var(--acc);font-weight:700">contact page</a>.`]]}});
 Object.values(PAGES).forEach(p=>p.t=p.t.replace(/\b(?!for\b)[a-z]/g,m=>m.toUpperCase()));
 const smap=()=>{const L=(h,t)=>`<li><a href="${h}" style="color:var(--acc)">${t}</a></li>`;return `<h2>Main</h2><ul>${L(`#home`,`Home`)}${L(`#categories`,`All categories`)}</ul><h2>Categories</h2><ul>${CATS.map(c=>L(`#`+SL(c),c)).join(``)}</ul><h2>Pages</h2><ul>${Object.keys(PAGES).map(k=>L(`#`+k,PAGES[k].t)).join(``)}</ul><h2>Latest stories</h2><ul>${A.map(a=>L(`#`+a.id,a.t)).join(``)}</ul>`};
 const bl=x=>typeof x===`string`?`<p>${x}</p>`:`<ul>${x.map(i=>`<li>${i}</li>`).join(``)}</ul>`;
 const cblock=()=>`<div class="ct"><div><b>Email</b><a href="mailto:${EM}">${EM}</a></div><div><b>Phone</b><a href="tel:+9779819215786">${PH}</a></div><div><b>Address</b>${AD}</div><div><b>Office hours</b>${HR}</div><div style="grid-column:1/-1"><b>Social media</b><span class="soc">${socL(22)}</span></div></div><div class="cf"><h2>Send us a message</h2><label>Your name<input id="cn"></label><label>Your email<input id="ce" type="email"></label><label>Message<textarea id="cm" rows="6"></textarea></label><button class="btn" id="cs1">Send message</button><p class="m" id="cnote" role="status">This opens your email app with the message ready to send.</p></div>`;
 function pg(k){const p=PAGES[k];
-return `<div class="w pg"><div class="bc"><a href="#home">Home</a> / ${p.t}</div><h1>${p.t}</h1><p class="dek">${p.d}</p><div class="pgb"><div>${p.x===`c`?cblock():p.x===`m`?smap():``}${p.s.map(s=>`<h2>${s[0]}</h2>${s.slice(1).map(bl).join(``)}`).join(``)}${p.x===`w`?`<a class="btn" href="mailto:${EM}?subject=Guest%20post">Email your pitch</a>`:``}</div><aside><div class="pn"><h4>Information</h4>${Object.keys(PAGES).map(x=>`<a href="#${x}"${x===k?` aria-current="page"`:``}>${PAGES[x].t}</a>`).join(``)}</div></aside></div></div>`}
+return `<div class="w pg"><div class="bc"><a href="#home">Home</a> / ${p.t}</div><h1>${p.t}</h1><p class="dek">${p.d}</p><div class="pgb"><div>${p.x===`c`?cblock():p.x===`m`?smap():p.x===`a`?authorBlock():``}${p.s.map(s=>`<h2>${s[0]}</h2>${s.slice(1).map(bl).join(``)}`).join(``)}${p.x===`w`?`<a class="btn" href="mailto:${EM}?subject=Guest%20post">Email your pitch</a>`:``}</div><aside><div class="pn"><h4>Information</h4>${Object.keys(PAGES).filter(x=>!PAGES[x].hide).map(x=>`<a href="#${x}"${x===k?` aria-current="page"`:``}>${PAGES[x].t}</a>`).join(``)}</div></aside></div></div>`}
 document.addEventListener("click",e=>{if(e.target.id!=="cs1")return;const n=$("#cn").value.trim(),m=$("#cm").value.trim(),em=$("#ce");if(!n||!m||!em.value||!em.checkValidity()){$("#cnote").textContent="Please add your name, a valid email and a message.";return}location.href=`mailto:${EM}?subject=${encodeURIComponent("Message from "+n)}&body=${encodeURIComponent(m)}%0A%0AReply to: ${encodeURIComponent(em.value)}`});
-function story(a){const rel=A.filter(x=>x.cat===a.cat&&x.id!==a.id).concat(A).filter(x=>x.id!==a.id).slice(0,3);
-return `<article class="w art"><span class="k">${a.cat}</span><h1>${a.t}</h1><p class="dek">${a.d}</p><div class="by"><span class="av">${a.by[0]}</span><div><b>${a.by}</b><br><span class="m">${a.when} · ${a.min} min read</span></div></div>
-<div class="ab"><div class="body"><img class="fi" src="${FEAT}" alt="Featured image: Claim your business on ChatGPT, a step-by-step guide to getting found in AI search results" width="1000" height="563"><div class="toc"><b>In this article</b><a href="#" data-s="s1">What happened</a><a href="#" data-s="s2">Why it matters</a><a href="#" data-s="s3">What comes next</a></div>
+const CC={News:"#af0c18",World:"#1d4ed8",Sports:"#15803d",Technology:"#7c3aed","Digital Marketing":"#c2410c",Entertainment:"#be185d",Travel:"#0e7490","Business & Finance":"#a16207"};
+const paintK=(r=document)=>r.querySelectorAll(".k").forEach(k=>{const c=CC[k.textContent.trim()];if(c)k.style.setProperty("--kc",c)});
+const saved=()=>{try{return JSON.parse(localStorage.getItem("sv")||"[]")}catch(e){return[]}};
+const svc=()=>{const e=document.getElementById("svc");if(e)e.textContent=saved().length};
+const fmtD=d=>d.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})+", "+d.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+const SUB={News:["Politics","Environment","Health","Local"],World:["Asia","Middle East","Climate","Trade"],Sports:["Cricket","Football","Athletics","Tennis"],Technology:["AI","Security","Gadgets","Open source"],"Digital Marketing":["SEO","AEO and GEO","E-commerce","Email"],Entertainment:["Film","Music","Streaming","Reviews"],Travel:["Nepal","Europe","Food","Lifestyle"]};
+const slug=t=>t.toLowerCase().replace(/[^a-z0-9]+/g,"-");
+const SLIDER=l=>`<div class="sl" role="region" aria-roledescription="carousel" aria-label="Top stories"><div class="slt">${l.map((a,i)=>`<a class="card slide${i?"":" on"}" href="#${a.id}"${i?' aria-hidden="true" tabindex="-1"':""}>${T(a,"w16 kb")}<span class="k">${a.cat}</span><h2>${a.t}</h2><p>${a.d}</p></a>`).join("")}</div><div class="slc"><button class="slb" data-d="-1" aria-label="Previous story">${ic('<path d="m15 18-6-6 6-6"/>',18)}</button><div class="sld" role="tablist" aria-label="Choose story">${l.map((a,i)=>`<button class="dt${i?"":" on"}" role="tab" aria-label="Story ${i+1}" aria-selected="${!i}"><i></i></button>`).join("")}</div><button class="slb" data-d="1" aria-label="Next story">${ic('<path d="m9 18 6-6-6-6"/>',18)}</button></div></div>`;
+function initSlider(){const sl=document.querySelector(".sl");if(!sl)return;const sd=[...sl.querySelectorAll(".slide")],dt=[...sl.querySelectorAll(".dt")];let cur=0;
+const go=n=>{cur=(n+sd.length)%sd.length;sd.forEach((x,i)=>{const on=i===cur;x.classList.toggle("on",on);x.setAttribute("aria-hidden",String(!on));x.tabIndex=on?0:-1});dt.forEach((d,i)=>{d.classList.toggle("on",i===cur);d.setAttribute("aria-selected",String(i===cur))})};
+sl.addEventListener("click",e=>{const b=e.target.closest(".slb,.dt");if(!b)return;go(b.dataset.d?cur+ +b.dataset.d:dt.indexOf(b))});
+dt.forEach(d=>d.addEventListener("animationend",e=>{if(e.animationName==="slp")go(cur+1)}));
+["mouseenter","focusin"].forEach(v=>sl.addEventListener(v,()=>sl.classList.add("paused")));["mouseleave","focusout"].forEach(v=>sl.addEventListener(v,()=>sl.classList.remove("paused")));
+sl.addEventListener("keydown",e=>{if(e.key==="ArrowRight")go(cur+1);if(e.key==="ArrowLeft")go(cur-1)});
+let x0=null;sl.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});sl.addEventListener("touchend",e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>40)go(cur+(dx<0?1:-1))})}
+function mmOpen(c,a){const m=$("#mm");m.innerHTML=`<div class="mmi"><div class="mmt"><h3>${c}</h3><p>${DESC[c]}</p><div class="cs2">${SUB[c].map(t=>`<a href="#q-${slug(t)}">${t}</a>`).join("")}</div><a class="va" href="#${SL(c)}">View all ${c} \u2192</a></div><div class="mmc">${byc(c).slice(0,3).map(cd).join("")}</div></div>`;m.hidden=false;paintK(m);document.querySelectorAll(".menu a[aria-expanded]").forEach(x=>x.setAttribute("aria-expanded",String(x===a)))}
+function mmClose(){const m=$("#mm");if(m&&!m.hidden){m.hidden=true;document.querySelectorAll(".menu a[aria-expanded]").forEach(x=>x.setAttribute("aria-expanded","false"))}}
+let SPY=null;function spy(){const tc=[...document.querySelectorAll(".toc a[data-s]")];SPY=null;if(!tc.length)return;const hs=tc.map(a=>document.getElementById(a.dataset.s));SPY=()=>{let cur=0;hs.forEach((h,i)=>{if(h&&h.getBoundingClientRect().top<=160)cur=i});tc.forEach((a,i)=>a.classList.toggle("on",i===cur))};SPY()}
+const authorBlock=()=>`<div class="au"><span class="av big">S</span><div><h2 style="margin:0">Shahnawaj Ahmad</h2><p class="m" style="margin:4px 0 8px">SEO, AEO &amp; GEO Specialist \u00b7 Birgunj, Parsa-Nepal</p><div class="soc">${socL(20)}</div><p style="margin:10px 0 0"><a href="mailto:${EM}" style="color:var(--acc);font-weight:700">${EM}</a> \u00b7 <a href="tel:+9779819215786">${PH}</a></p></div></div><h2>Latest stories by Shahnawaj</h2>${LAT.slice(0,10).map(row).join("")}`;
+function savedPg(){const l=saved().map(id=>A.find(a=>a.id===id)).filter(Boolean);return `<div class="w two" style="padding-top:26px"><div><h1 class="sh" style="font-size:34px">Saved stories</h1>${l.length?l.map(row).join(""):`<p>You haven\u2019t saved any stories yet. Open an article and press <b>Save</b> to keep it here.</p>`}</div><aside aria-label="Sidebar">${pop()}</aside></div>`}
+function story(a){const same=A.filter(x=>x.cat===a.cat&&x.id!==a.id),rel=same.concat(A.filter(x=>x.cat!==a.cat)).slice(0,3),nx=same[0]||A[(a.i+1)%A.length],pub=new Date(Date.now()-a.hrs*36e5),upd=new Date(pub.getTime()+18*6e4),sv=saved().includes(a.id),tts="speechSynthesis" in window;
+const hero=a.fx?`<img class="fi" src="${FEAT}" alt="Featured image: Claim your business on ChatGPT, a step-by-step guide to getting found in AI search results" width="1000" height="563">`:`<div class="fcard ${PT(a)}" style="${SG(a)}"><i>${CI[a.cat]}</i><span class="fk">${a.cat}</span><small>Shahnawaj Ahmad \u00b7 ${fmtD(pub).split(",")[0]}</small></div>`;
+return `<article class="w art"><span class="k">${a.cat}</span><h1>${a.t}</h1><p class="dek">${a.d}</p>
+<div class="by"><a class="av" href="#author" aria-label="About the author">S</a><div><b><a href="#author">${a.by}</a></b><br><span class="m">Published ${fmtD(pub)} \u00b7 Updated ${fmtD(upd)} \u00b7 ${a.min} min read</span></div></div>
+<div class="tools" role="toolbar" aria-label="Article tools"><button data-t="fs-" aria-label="Smaller text">A\u2212</button><button data-t="fs+" aria-label="Larger text">A+</button>${tts?`<button data-t="listen" aria-pressed="false">${ic(I.vol,16)}<span>Listen</span></button>`:""}<button data-t="save" data-id="${a.id}" aria-pressed="${sv}">${ic(I.bm,16)}<span>${sv?"Saved":"Save"}</span></button></div>
+<div class="ab"><nav class="toc" aria-label="Contents"><b>In this article</b><a href="#" data-s="s1">What happened</a><a href="#" data-s="s2">Why it matters</a><a href="#" data-s="s3">What comes next</a><a href="#" data-s="s4">Sources</a></nav>
+<div class="body">${hero}<div class="kt"><b>Key takeaways</b><ul><li>${a.d}</li><li>Why it matters for ${a.cat.toLowerCase()} readers is explained below.</li><li>We will update this story as new reporting arrives.</li></ul></div>
 <h2 id="s1" style="margin-top:0">What happened</h2><p>${a.d} Officials and analysts called the development significant, though several cautioned that the full picture will take weeks to emerge.</p><p>People close to the process said the timeline moved faster than expected, with the latest figures confirming a shift that had been building through the autumn.</p>
-${ADV(0,0,"In-article placement")}<h2 id="s2">Why it matters</h2><p>For readers following ${a.cat.toLowerCase()} coverage, the change reshapes the questions that matter most: who is affected first, who benefits, and how durable the outcome is likely to be.</p>
+${ADV(0,0,"In-article placement")}<h2 id="s2">Why it matters</h2><p>For readers following ${a.cat.toLowerCase()} coverage, the change reshapes the questions that matter most: who is affected first, who benefits, and how durable the outcome is likely to be.</p><p>Experts interviewed for this story pointed to earlier episodes as a guide, while noting that conditions today differ in important ways.</p>
 <h2 id="s3">What comes next</h2><p>The next milestones are expected within weeks. We will update this story as new reporting arrives.</p>
-<div class="shr"><button data-sh="copy">Copy link</button><button data-sh="x">Share on X</button><button data-sh="fb">Share on Facebook</button></div><div class="ab2"><span class="av">S</span><div><b>Shahnawaj Ahmad</b><p>SEO, AEO and GEO specialist with 8+ years in digital marketing, based in Nepal. Writes on world news, technology and e-commerce. <a href="#about">About the author</a> · <a href="mailto:contact@shahnawaj.com.np">contact@shahnawaj.com.np</a></p><div class="soc" style="margin-top:10px">${socL(18)}</div></div></div></div><aside aria-label="Sidebar">${pop()}</aside></div>
+<h2 id="s4">Sources</h2><ul><li>Sample source \u2013 official statement (add publisher and link)</li><li>Sample source \u2013 agency report (add publisher and link)</li></ul>
+<div class="shr"><button data-sh="copy">Copy link</button><button data-sh="x">Share on X</button><button data-sh="fb">Share on Facebook</button></div>
+<div class="ab2"><a class="av" href="#author">S</a><div><b>Shahnawaj Ahmad</b><p>SEO, AEO and GEO specialist with 8+ years in digital marketing, based in Nepal. Writes on world news, technology and e-commerce. <a href="#author">View author page</a> \u00b7 <a href="mailto:contact@shahnawaj.com.np">contact@shahnawaj.com.np</a></p><div class="soc" style="margin-top:10px">${socL(18)}</div></div></div>
+<a class="card nx" href="#${nx.id}">${T(nx,"w16")}<div><span class="m">Up next</span><h3 style="font-size:18px">${nx.t}</h3></div></a></div><aside aria-label="Sidebar">${pop()}</aside></div>
 <h2 class="sh sec">Related stories</h2><div class="g3" style="margin-top:18px">${rel.map(x=>`<a class="card" href="#${x.id}">${T(x,"w16")}<h4>${x.t}</h4></a>`).join("")}</div></article>`}
-function search(q){q=q.trim().toLowerCase();const r=q?A.filter(a=>(a.t+a.d+a.by+a.cat).toLowerCase().includes(q)):[];
-$("#res").innerHTML=q?(r.length?r.map(row).join(""):`<p>No stories match “${q.replace(/[<>&]/g,"")}”. Try a broader term or browse a section.</p>`):""}
+const SUBALL=Object.values(SUB).flat(),POP=["Interest rates","Budget row","AI and energy","Monsoon recovery","Test cricket","Housing","Sleep science"],SF={c:"All",t:0};
+const rs=()=>{try{return JSON.parse(localStorage.getItem("rs")||"[]")}catch(e){return[]}};
+const addRs=q=>{q=q.trim();if(!q)return;try{localStorage.setItem("rs",JSON.stringify([q,...rs().filter(x=>x!==q)].slice(0,5)))}catch(e){}};
+const esc=t=>t.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function hl(t,q){const w=q.split(/\s+/).filter(Boolean).map(x=>x.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"));return w.length?t.replace(new RegExp("("+w.join("|")+")","ig"),"<mark>$1</mark>"):t}
+function buildF(){$("#sf").innerHTML=`<div class="fl" role="group" aria-label="Filter by category">${["All",...ALLC].map(c=>`<button data-fc="${c}" aria-pressed="${SF.c===c}">${c}</button>`).join("")}</div><div class="fl" role="group" aria-label="Filter by date">${[[0,"Any time"],[24,"Past 24 hours"],[168,"Past week"]].map(([h,l])=>`<button data-ft="${h}" aria-pressed="${SF.t===h}">${l}</button>`).join("")}</div>`}
+function search(q0){const q=q0.trim().toLowerCase(),R=$("#res"),chip=t=>`<button class="chp" data-q="${esc(t)}">${esc(t)}</button>`;
+if(!q){const r=rs();R.innerHTML=(r.length?`<h4 class="ht">Recent searches</h4><div class="cs2">${r.map(chip).join("")}</div>`:"")+`<h4 class="ht" style="margin-top:22px">Popular searches</h4><div class="cs2">${POP.map(chip).join("")}</div><h4 class="ht" style="margin-top:22px">Browse topics</h4><div class="cs2">${[...ALLC,...SUBALL.slice(0,8)].map(chip).join("")}</div>`;return}
+const words=q.split(/\s+/),sug=[...new Set([...ALLC,...SUBALL,...POP])].filter(t=>t.toLowerCase().includes(q)&&t.toLowerCase()!==q).slice(0,6);
+const r=A.filter(a=>{const h=(a.t+" "+a.d+" "+a.cat).toLowerCase();return words.every(w=>h.includes(w))&&(SF.c==="All"||a.cat===SF.c)&&(!SF.t||a.hrs<=SF.t)}).sort((x,y)=>(y.t.toLowerCase().includes(q)-x.t.toLowerCase().includes(q))||x.hrs-y.hrs);
+R.innerHTML=(sug.length?`<div class="cs2 sg" aria-label="Suggestions">${sug.map(chip).join("")}</div>`:"")+`<p class="m" role="status">${r.length} result${r.length===1?"":"s"} for \u201c${esc(q0.trim())}\u201d</p>`+(r.length?r.map(a=>`<a class="card it" href="#${a.id}" data-r="1"><div><span class="k">${a.cat}</span><h3>${hl(a.t,q)}</h3><p>${hl(a.d,q)}</p><span class="m">${a.when}</span></div>${T(a)}</a>`).join(""):`<p>No stories match. Try a broader term, remove a filter, or pick a suggestion above.</p>`);paintK(R)}
 const MO=()=>document.documentElement.dataset.motion!=="off";
 function reveal(){app.classList.remove("pgin");if(!MO())return;void app.offsetWidth;app.classList.add("pgin");
-document.querySelectorAll(".hg h1").forEach(h=>{if(h.dataset.s)return;h.dataset.s=1;h.innerHTML=h.textContent.split(" ").map((w,i)=>`<span class="wd" style="--w:${i}"><span>${w}</span></span>`).join(" ")});
+document.querySelectorAll(".hg .slide h2").forEach(h=>{if(h.dataset.s)return;h.dataset.s=1;h.innerHTML=h.textContent.split(" ").map((w,i)=>`<span class="wd" style="--w:${i}"><span>${w}</span></span>`).join(" ")});
 if(!("IntersectionObserver" in window))return;
 const io=new IntersectionObserver(es=>{let n=0;es.forEach(x=>{if(x.isIntersecting){x.target.style.setProperty("--d",(n++*70)+"ms");x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.08,rootMargin:"0px 0px -4% 0px"});
-document.querySelectorAll(".sec>h2,.sec .card,.hg .card,.hg li,.hg .tx2,.hg .op,.wg,.ad,.bkb,.body>*,.ab2,.two>div>.it,.cg .cc,.pgb>div>*,.pp .pi").forEach(e=>{if(e.classList.contains("rv1"))return;e.classList.add("rv1");io.observe(e)})}
+document.querySelectorAll(".sec>h2,.sec .card,.hg .card:not(.slide),.sl,.nfc,.hg li,.hg .tx2,.hg .op,.wg,.ad,.bkb,.body>*,.ab2,.two>div>.it,.cg .cc,.pgb>div>*,.pp .pi").forEach(e=>{if(e.classList.contains("rv1"))return;e.classList.add("rv1");io.observe(e)})}
 function route(){const h=location.hash.slice(1)||"home";let c="";
 if(h.startsWith("story-")&&A.find(a=>a.id===h)){const a=A.find(a=>a.id===h);app.innerHTML=story(a);c=a.cat;document.title=a.t+" – Shahnawaj Ahmad"}
+else if(h==="saved"){app.innerHTML=savedPg();c="";document.title="Saved stories – Shahnawaj Ahmad"}
 else if(PAGES[h]){app.innerHTML=pg(h);c=h==="contact"?"Contact":"";document.title=PAGES[h].t+" – Shahnawaj Ahmad"}
 else if(h==="categories"){app.innerHTML=cats();c="Categories";document.title="All categories – Shahnawaj Ahmad"}
 else if(ALLC.some(x=>SL(x)===h)){c=ALLC.find(x=>SL(x)===h);app.innerHTML=cat(c);document.title=c+" – Shahnawaj Ahmad"}
 else if(h.startsWith("q-")){app.innerHTML=home();openS(h.slice(2).replace(/-/g," "))}
 else{app.innerHTML=home();c="Home";document.title="Shahnawaj Ahmad – Trusted Global News and Insightful Analysis"}
 $("#menu").querySelectorAll("a").forEach(a=>a.toggleAttribute("aria-current",a.textContent===c));$("#menu").classList.remove("on");$("#bg").setAttribute("aria-expanded","false");
-if(!h.startsWith("q-"))scrollTo(0,0);reveal();if(window.__r)app.focus({preventScroll:true});window.__r=1}
-function openS(v=""){$("#ov").classList.add("on");const q=$("#q");q.value=v;search(v);q.focus()}
+if(!h.startsWith("q-"))scrollTo(0,0);reveal();initSlider();paintK();spy();mmClose();svc();try{speechSynthesis.cancel()}catch(e){}if(window.__r)app.focus({preventScroll:true});window.__r=1}
+function openS(v=""){$("#ov").classList.add("on");const q=$("#q");q.value=v;buildF();search(v);q.focus()}
 function closeS(){$("#ov").classList.remove("on");if(location.hash.startsWith("#q-"))location.hash="home"}
 $("#menu").innerHTML=`<a href="#home">Home</a>`+CATS.map(c=>`<a href="#${SL(c)}">${c}</a>`).join("")+`<a href="#contact">Contact</a>`;
 $("#menu").querySelectorAll("a").forEach((a,i)=>a.style.setProperty("--i",i));
-$("#sub").innerHTML=["Interest rates","Budget row","AI and energy","Monsoon recovery","Test cricket","Housing","Sleep science"].map(t=>`<a href="#q-${t.toLowerCase().replace(/ /g,"-")}">${t}</a>`).join("")+`<a href="#about" style="margin-left:auto">About</a><a href="#contact">Contact</a><a href="#privacy-policy">Privacy policy</a><a href="#terms-and-conditions">Terms</a>`;
+$("#sub").innerHTML=["Interest rates","Budget row","AI and energy","Monsoon recovery","Test cricket","Housing","Sleep science"].map(t=>`<a href="#q-${t.toLowerCase().replace(/ /g,"-")}">${t}</a>`).join("")+`<a href="#about" style="margin-left:auto">About</a><a href="#contact">Contact</a><a href="#privacy-policy">Privacy policy</a><a href="#terms-and-conditions">Terms</a><a href="#saved">Saved (<span id="svc">0</span>)</a>`;
 $("#f1").innerHTML=ALLC.map(c=>`<li><a href="#${SL(c)}">${c}</a></li>`).join("")+`<li><a href="#categories">All categories</a></li>`;
 $("#soc").innerHTML=socL(18);$("#soc0").innerHTML=socL(16);
 $("#sb").innerHTML=ic(I.search);$("#tb").innerHTML=ic(I.moon);$("#bg").innerHTML=ic(I.menu)+"<span>Menu</span>";
@@ -471,7 +562,32 @@ let sm=null;try{sm=localStorage.getItem("mo")}catch(e){}
 setMo(sm?sm==="on":!matchMedia("(prefers-reduced-motion:reduce)").matches,false);
 $("#mt").onclick=()=>{setMo(!MO(),true);if(MO())reveal()};
 $("#up").innerHTML=ic('<path d="m5 15 7-7 7 7"/>',22);$("#up").onclick=()=>scrollTo({top:0,behavior:MO()?"smooth":"auto"});
-let tk=0;addEventListener("scroll",()=>{if(tk)return;tk=1;requestAnimationFrame(()=>{tk=0;const y=scrollY,m=document.documentElement.scrollHeight-innerHeight;$("#prog").style.setProperty("--p",m>0?Math.min(1,y/m):0);$("#up").classList.toggle("on",y>700);document.body.classList.toggle("sc",y>90)})},{passive:true});
+let tk=0;addEventListener("scroll",()=>{if(tk)return;tk=1;requestAnimationFrame(()=>{tk=0;const y=scrollY,m=document.documentElement.scrollHeight-innerHeight;$("#prog").style.setProperty("--p",m>0?Math.min(1,y/m):0);$("#up").classList.toggle("on",y>700);document.body.classList.toggle("sc",y>90);if(SPY)SPY()})},{passive:true});
+$("#sb2").innerHTML=ic(I.search);$("#tb2").innerHTML=ic(I.moon);$("#sb2").onclick=()=>openS();$("#tb2").onclick=()=>$("#tb").click();
+$("#menu").querySelectorAll("a").forEach((a,i)=>{if(i>0&&i<=CATS.length){a.dataset.c=CATS[i-1];a.setAttribute("aria-haspopup","true");a.setAttribute("aria-expanded","false")}});
+$("#menu").addEventListener("mouseover",e=>{const a=e.target.closest("a");if(!a||innerWidth<1001)return;a.dataset.c?mmOpen(a.dataset.c,a):mmClose()});
+$("#menu").addEventListener("focusin",e=>{const a=e.target.closest("a");if(a&&a.dataset.c&&innerWidth>1000)mmOpen(a.dataset.c,a)});
+document.querySelector(".hd").addEventListener("mouseleave",mmClose);
+document.addEventListener("click",e=>{if(!e.target.closest(".hd"))mmClose()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")mmClose()});
+const FSK=()=>{let n=0;try{n=+localStorage.getItem("fs")}catch(e){}return n||(innerWidth<641?17:18)};
+const setFs=n=>{n=Math.max(15,Math.min(24,n));document.documentElement.style.setProperty("--fs",n+"px");try{localStorage.setItem("fs",n)}catch(e){}};
+document.documentElement.style.setProperty("--fs",FSK()+"px");
+document.addEventListener("click",e=>{const b=e.target.closest("[data-t]");if(!b)return;const t=b.dataset.t;
+if(t==="fs+"||t==="fs-")setFs(FSK()+(t==="fs+"?1:-1));
+else if(t==="save"){let l=saved();const id=b.dataset.id,on=!l.includes(id);l=on?[id,...l]:l.filter(x=>x!==id);try{localStorage.setItem("sv",JSON.stringify(l))}catch(x){}b.setAttribute("aria-pressed",String(on));b.querySelector("span").textContent=on?"Saved":"Save";svc()}
+else if(t==="listen"){const ss=speechSynthesis,sp=b.querySelector("span");if(ss.speaking){ss.cancel();b.setAttribute("aria-pressed","false");sp.textContent="Listen";return}
+const u=new SpeechSynthesisUtterance(document.querySelector(".art h1").textContent+". "+[...document.querySelectorAll(".body p")].map(p=>p.textContent).join(" "));u.onend=()=>{b.setAttribute("aria-pressed","false");sp.textContent="Listen"};ss.speak(u);b.setAttribute("aria-pressed","true");sp.textContent="Stop"}});
+document.addEventListener("click",e=>{const c=e.target.closest("[data-fc],[data-ft],[data-q],[data-r]");if(!c)return;
+if(c.dataset.fc){SF.c=c.dataset.fc;c.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===c)))}
+else if(c.dataset.ft!==undefined){SF.t=+c.dataset.ft;c.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===c)))}
+else if(c.dataset.q){$("#q").value=c.dataset.q;addRs(c.dataset.q);$("#q").focus()}
+else if(c.dataset.r)addRs($("#q").value);
+search($("#q").value)});
+$("#q").addEventListener("keydown",e=>{if(e.key==="Enter")addRs($("#q").value)});
+$("#ancx").onclick=()=>{document.body.classList.add("noanc");try{sessionStorage.setItem("anc","1")}catch(e){}};try{if(sessionStorage.getItem("anc"))document.body.classList.add("noanc")}catch(e){}
+let dip=null;addEventListener("beforeinstallprompt",e=>{e.preventDefault();dip=e;$("#inst").hidden=false});$("#inst").onclick=()=>{if(dip){dip.prompt();dip=null;$("#inst").hidden=true}};
+if("serviceWorker" in navigator&&/^https?:$/.test(location.protocol))addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 $("#skip").onclick=()=>app.focus();
 document.addEventListener("click",e=>{const m=$("#menu");if(m.classList.contains("on")&&!e.target.closest(".hd")){m.classList.remove("on");$("#bg").setAttribute("aria-expanded","false")}});
 document.addEventListener("keydown",e=>{const m=$("#menu");if(e.key==="Escape"&&m.classList.contains("on")){m.classList.remove("on");$("#bg").setAttribute("aria-expanded","false");$("#bg").focus()}});
